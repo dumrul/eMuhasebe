@@ -1,0 +1,28 @@
+1. package.json İçinde npm Script Tanımlamak (Önerilen Yöntem)
+Adımlar:
+
+1️⃣ mymovies/package.json dosyanı aç ve "scripts" bölümüne şu komutu ekle:
+
+json
+Kopyala
+Düzenle
+"scripts": {
+  "start:backend": "cd backend/webapi && dotnet run",
+  "start:frontend": "cd frontend && npm start",
+  "start:all": "concurrently \"npm run start:backend\" \"npm run start:frontend\""
+}
+2️⃣ Gerekli paketi yükle:
+Eğer concurrently paketi yüklü değilse, şu komutu çalıştırarak yükleyebilirsin:
+
+sh
+Kopyala
+Düzenle
+npm install -g concurrently
+3️⃣ Tüm projeleri tek komutla başlat:
+Şimdi backend ve frontend'i aynı anda çalıştırmak için şu komutu kullanabilirsin:
+
+sh
+Kopyala
+Düzenle
+npm run start:all
+✅ Bu yöntemle hem Web API hem de Angular tek bir komutla başlatılır.

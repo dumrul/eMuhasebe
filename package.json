@@ -1,0 +1,18 @@
+{
+  "name": "emuhasebe",
+  "version": "1.0.0",
+  "description": "eMuhasebe Uygulaması",
+  "license": "ISC",
+  "author": "Mahmut Dumrul",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start:backend": "cd eMuhasebeServer/eMuhasebeServer.WebAPI && dotnet run",
+    "start:frontend": "cd eMuhasebeClient && npm start",
+    "start:all": "concurrently \"npm run start:backend\" \"npm run start:frontend\""
+  },
+  "dependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
