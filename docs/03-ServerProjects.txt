@@ -1,0 +1,12 @@
+eMuhasebeServer> dotnet new sln
+
+eMuhasebeServer> dotnet new classlib -o eMuhasebeServer.Domain -f net8.0
+eMuhasebeServer> dotnet new classlib -o eMuhasebeServer.Application -f net8.0
+eMuhasebeServer> dotnet new classlib -o eMuhasebeServer.Infrastructure -f net8.0
+eMuhasebeServer> dotnet new webapi -o eMuhasebeServer.WebAPI -f net8.0
+
+
+eMuhasebeServer> dotnet sln add eMuhasebeServer.Domain/eMuhasebeServer.Domain.csproj
+eMuhasebeServer> dotnet sln add eMuhasebeServer.Application/eMuhasebeServer.Application.csproj
+eMuhasebeServer> dotnet sln add eMuhasebeServer.Infrastructure/eMuhasebeServer.Infrastructure.csproj
+eMuhasebeServer> dotnet sln add eMuhasebeServer.WebAPI/eMuhasebeServer.WebAPI.csproj
